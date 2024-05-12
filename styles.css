@@ -113,6 +113,7 @@ article {
 	padding-left: 25px;
 	position: absolute;
 	height: 260px;
+	border-radius: 15px;
 }
 
 .article2 {
@@ -123,6 +124,7 @@ article {
 	padding-left: 25px;
 	position: absolute;
 	height: 260px;
+	border-radius: 15px;
 }
 
 .article3 {
@@ -133,6 +135,7 @@ article {
 	padding-left: 25px;
 	position: absolute;
 	height: 260px;
+	border-radius: 15px;
 }
 
 .article4 {
@@ -143,6 +146,7 @@ article {
 	padding-left: 25px;
 	position: absolute;
 	height: 260px;
+	border-radius: 15px;
 }
 
 .order {
