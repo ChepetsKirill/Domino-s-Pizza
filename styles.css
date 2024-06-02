@@ -28,6 +28,43 @@ header a:hover {
 
 main h1 {
 	text-align: center;
+	animation: order 5s infinite;
+}
+
+@keyframes order {
+	0% {
+
+	}
+
+	15% {
+		transform: scale(2);
+	}
+
+	45% {
+		transform: scale(1);
+		transform: translateX(-150px);
+	}
+
+	60% {
+		transform: scale(2);
+	}
+
+	75% {
+		transform: scale(1);
+		transform: translateX(150);
+	}
+
+	90% {
+		transform: translateX(300);
+	}
+
+	100% {
+		transform: translateX(-150);
+	}
+
+	
+
+
 }
 
 main h3 {
@@ -105,6 +142,28 @@ article {
 	text-align: center;
 }
 
+@keyframes card {
+	0% {
+
+	}
+
+	30% {
+		transform: scale(0.5);
+	}
+
+	60% {
+		rotate: 360deg;
+	}
+
+	90% {
+		transform: scale(1);
+	}
+
+	100% {
+
+	}
+}
+
 .article1 {
 	box-shadow: -1px 6px 11px -4px black;
 	width: 180px;
@@ -114,6 +173,7 @@ article {
 	position: absolute;
 	height: 260px;
 	border-radius: 15px;
+	animation: card 5s infinite;
 }
 
 .article2 {
@@ -125,6 +185,7 @@ article {
 	position: absolute;
 	height: 260px;
 	border-radius: 15px;
+	animation: card 5s infinite;
 }
 
 .article3 {
@@ -136,6 +197,7 @@ article {
 	position: absolute;
 	height: 260px;
 	border-radius: 15px;
+	animation: card 5s infinite;
 }
 
 .article4 {
@@ -147,6 +209,7 @@ article {
 	position: absolute;
 	height: 260px;
 	border-radius: 15px;
+	animation: card 5s infinite;
 }
 
 .order {
@@ -238,3 +301,70 @@ footer span {
 .map iframe {
 	margin-left: 300px;
 }
+
+
+.wrap {
+  margin-top: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(90deg, rgba(129, 230, 21, 1) 0%, rgba(79, 209, 197, 1) 100%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+  transform: all 0.3s ease-in-out 0s;
+}
+
+button::before {
+  content: '';
+  border-radius: 50%;
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+
+button::after {
+  content: '';
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
